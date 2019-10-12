@@ -1,6 +1,6 @@
-docker build -t vivekbhalala/multi-client:latest -t vivekbhalala/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t vivekbhalala/multi-server:latest -t vivekbhalala/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t vivekbhalala/multi-worker:latest -t vivekbhalala/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t vivekbhalala/multi-client:latest -t vivekbhalala/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t vivekbhalala/multi-server:latest -t vivekbhalala/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t vivekbhalala/multi-worker:latest -t vivekbhalala/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push vivekbhalala/multi-client:latest
 docker push vivekbhalala/multi-server:latest
